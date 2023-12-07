@@ -3,15 +3,21 @@ import { NavLink } from 'react-router-dom'
 export const Nav = () => {
     return (
         <>
-            <ul>
+            <ul className="flex justify-center  leading-6  gap-6 p-5 mb-4 bg-indigo-300 text-2xl font-serif">
                 <li>
-                    <NavLink to="/welcome">Welcome</NavLink>
+                    <NavLink className={'active-page'} to="/welcome">
+                        Welcome
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/clothing">Clothes</NavLink>
+                    <NavLink className={'active-page'} to="/clothing">
+                        Clothes
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/cart">Cart</NavLink>
+                    <NavLink className={'active-page'} to="/cart">
+                        Cart
+                    </NavLink>
                 </li>
             </ul>
         </>

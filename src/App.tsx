@@ -4,9 +4,10 @@ import { Nav } from './components/Nav'
 function App() {
     return (
         <>
-            <h1 className="text-5xl text-red-500">Hello World</h1>
             <Nav />
-            <AppRouter />
+            <div className="mx-6 text-center text-slate-200 text-lg">
+                <AppRouter />
+            </div>
         </>
     )
 }
