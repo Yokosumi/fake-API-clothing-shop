@@ -1,3 +1,4 @@
+import { AppRouter } from './AppRouter'
 import { Nav } from './components/Nav'
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
         <>
             <h1 className="text-5xl text-red-500">Hello World</h1>
             <Nav />
+            <AppRouter />
         </>
     )
 }
