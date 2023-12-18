@@ -14,6 +14,16 @@
             "customTemplates": {
                 "component": "src/templates/TemplateName.tsx"
             }
+        },
+        "page": {
+            "path": "src/pages",
+            "withStyle": false,
+            "withTest": false,
+            "withStory": false,
+            "withLazy": false,
+            "customTemplates": {
+                "component": "src/templates/TemplateName.tsx"
+            }
         }
     }
 }
