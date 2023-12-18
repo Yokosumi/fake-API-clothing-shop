@@ -1,21 +1,9 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { ProductsTypes } from '../types'
+import { ProductCard } from './ProductCard'
 
 const productsURL = 'https://api.escuelajs.co/api/v1/products'
-
-type ProductsTypes = {
-    id: number
-    title: string
-    price: number
-    category: CategoryTypes
-    description: string
-}
-
-type CategoryTypes = {
-    id: number
-    name: string
-    image: string
-}
 
 export const FetchingData = () => {
     const [fetchedData, setFetchedData] = useState([] as ProductsTypes[])
@@ -28,21 +16,22 @@ export const FetchingData = () => {
     useEffect(() => {
         fetchData()
     }, [])
-    console.log(fetchedData)
 
     return (
         <>
             <h2>This is the fetching data component</h2>
             {fetchedData.length > 0 ? (
                 <>
-                    <img
-                        className="w-20 h-full"
-                        src={fetchedData[0].category.image}
-                    />
-                    <div> Product Name: {fetchedData[0].title}</div>
-                    <div> Product ID: {fetchedData[0].id}</div>
-                    <div> Price: {fetchedData[0].price}€</div>
-                    <div> Description: {fetchedData[0].description}</div>
+                    {fetchedData.map((product) => {
+                        return (
+                            <ProductCard
+                                key={product.id}
+                                title={product.title}
+                                price={product.price}
+                                category={product.category}
+                            />
+                        )
+                    })}
                 </>
             ) : (
                 <div>Loading...</div>
