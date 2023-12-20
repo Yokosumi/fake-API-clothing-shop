@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { ProductsTypes } from '../types'
 import { ProductCard } from './ProductCard'
 
-const productsURL = 'https://api.escuelajs.co/api/v1/products'
+const productsURL = 'https://api.escuelajs.co/api/v1/products/?categoryId=1'
 
 export const FetchingData = () => {
     const [fetchedData, setFetchedData] = useState([] as ProductsTypes[])

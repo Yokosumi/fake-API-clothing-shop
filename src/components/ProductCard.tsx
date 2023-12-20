@@ -25,7 +25,7 @@ export const ProductCard = ({ title, price, category }: Props) => {
                     </a>
                     <div className="flex items-center justify-between mt-5 mb-5">
                         <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                            {price}
+                            {price}€
                         </span>
                         <a
                             href="#"
